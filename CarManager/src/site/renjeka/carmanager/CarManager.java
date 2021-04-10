@@ -1,14 +1,24 @@
 package site.renjeka.carmanager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CarManager {
 
 	public static void main(String[] args) throws Throwable {
-		// TODO Auto-generated method stub
 
 		Car prius = new PassengerCar("Toyota Prius", 2008, 15000, 1200, Color.GREEN);
 
 		Car renault = new Bus("Renault Laguna", 2000, 9700, 1600, Color.WHITE);
 		Car renault2 = new Bus("Renault Laguna", 2000, 9700, 1600, Color.WHITE);
+		
+		List<Car> cars = new ArrayList<Car>();
+		
+		cars.add(prius);
+		cars.add(renault);
+		cars.add(renault2);
+		
+		System.out.println(cars);
 		
 		System.out.println(prius.toString());
 		System.out.println(renault.toString());

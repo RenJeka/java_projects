@@ -1,6 +1,8 @@
 package site.renjeka.stringmanipulation;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -16,17 +18,18 @@ public class StringUtil {
 		
 		// ------------------------------------------------------
 //		String myString = "some other loooong text!";
-		String[] words = myString.split(" ");
-		System.out.println("Количество слов в тексте: " + words.length);
+		List<String> words = new ArrayList<String>();
+		words = Arrays.asList(myString.split(" "));
+		System.out.println("Количество слов в тексте: " + words.size());
 		
 		// Первое слово
-		System.out.println("Слово по индексу [0]: " + words[0]);
-		char[] letters1 = words[0].toCharArray();
+		System.out.println("Слово по индексу [0]: " + words.get(0));
+		char[] letters1 = words.get(0).toCharArray();
 		System.out.println("Количество символов в слове по индексу [0]: " + letters1.length);
 		
 		// Второе слово
-		System.out.println("Слово по индексу [1]: " + words[1]);
-		char[] letters2 = words[1].toCharArray();
+		System.out.println("Слово по индексу [1]: " + words.get(1));
+		char[] letters2 = words.get(1).toCharArray();
 		System.out.println("Количество символов в слове по индексу [1]: " + letters2.length);
 		
 		// Двумерный массив
@@ -41,8 +44,8 @@ public class StringUtil {
 		// Логика с помощью массива
 		System.out.println("---------------------------------------------");
 		System.out.println("Логика вывода слов с помощью массива: \n");
-		for (int i = 0; i < words.length; i++) {
-			System.out.println("Слово по индексу [" + i + "]: "+ words[i]);
+		for (int i = 0; i < words.size(); i++) {
+			System.out.println("Слово по индексу [" + i + "]: "+ words.get(i));
 		}
 	}
 
